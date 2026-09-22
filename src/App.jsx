@@ -1,12 +1,14 @@
-import React from 'react';
+import Hero from './components/Hero';
+import Apresentacao from './components/Apresentacao';
 import Footer from './components/Footer';
 
 export const App = () => {
   return (
-  
-
-
-    <Footer />
+    <>
+      <Hero />
+      <Apresentacao />
+      <Footer />
+    </>
   )
 }
 
