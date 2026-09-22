@@ -57,10 +57,10 @@ export default function ContactForm(){
     };
  
     const atualizado = [entry, ...submissions];
-    const ok = writeSubmissions(updated);
- 
+    const ok = escreverInscricoes(atualizado);
+
     if (ok) {
-      setSubmissions(updated);
+      setSubmissions(atualizado);
       setName("");
       setEmail("");
       setMessage("");
@@ -72,9 +72,15 @@ export default function ContactForm(){
   }
  
   function handleClearAll() {
-    writeSubmissions([]);
+    escreverInscricoes([]);
     setSubmissions([]);
     setStatus(null);
+  }
+
+  function handleDelete(id) {
+    const atualizado = submissions.filter((s) => s.id !== id);
+    escreverInscricoes(atualizado);
+    setSubmissions(atualizado);
   }
   function formatDate(iso) {
     try {
@@ -96,11 +102,6 @@ export default function ContactForm(){
         {/* Form */}
         <div className="md:col-span-3 bg-white border border-stone-200 rounded-lg p-6 sm:p-8 shadow-sm">
           <h1 className="text-2xl font-semibold text-stone-900">Fale com a gente</h1>
-          <p className="mt-1 text-sm text-stone-500">
-            Os dados ficam salvos apenas no seu navegador (localStorage), como
-            simulação de um envio real.
-          </p>
- 
           <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-stone-700">
