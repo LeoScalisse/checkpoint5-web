@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const STORAGE_KEY = "contact_submissions";
 
@@ -25,12 +25,8 @@ export default function ContactForm(){
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [errors, setErrors] = useState({});
-    const [submissions, setSubmissions] = useState([]);
+    const [submissions, setSubmissions] = useState(() => lerInscricoes());
     const [status, setStatus] = useState(null);
-
-    useEffect(() => {
-        setSubmissions(lerInscricoes());
-    }, []);
 
     function validacao(){
         const next = {};
@@ -180,7 +176,6 @@ export default function ContactForm(){
           </form>
         </div>
  
-        {/* Submissions list */}
         <div className="md:col-span-2 bg-white border border-stone-200 rounded-lg p-6 sm:p-8 shadow-sm flex flex-col">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-stone-900">
