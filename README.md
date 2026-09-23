@@ -6,10 +6,10 @@ Landing page de um aplicativo fictício de delivery de comida, desenvolvida em *
 
 | Componente | Descrição |
 | --- | --- |
-| `Hero` | Chamada principal com botões de download (Android/iOS) e números do app. |
+| `Hero` | Botões de download (Android/iOS) e números do app. |
 | `Apresentacao` | Benefícios do GourmetOn: entrega rápida, variedade de restaurantes e pagamento fácil. |
-| `Funcionalidades` | Slideshow com as funcionalidades do app (cupons, pedidos anteriores, endereços favoritos). |
-| `ProcurarComidas` | Busca de pratos consumindo a API pública [TheMealDB](https://www.themealdb.com/api.php). |
+| `Funcionalidades` | Slideshow com as funcionalidades do app. |
+| `ProcurarComidas` | Busca de pratos consumindo a API pública|
 | `Depoimentos` | Depoimentos de clientes satisfeitos, com nota em estrelas. |
 | `Contactform` | Formulário de contato com validação dos campos. |
 | `Footer` | Rodapé da página. |
@@ -20,6 +20,7 @@ Landing page de um aplicativo fictício de delivery de comida, desenvolvida em *
 - [Vite](https://vite.dev/)
 - [Tailwind CSS 4](https://tailwindcss.com/)
 - [React Icons](https://react-icons.github.io/react-icons/) e [Lucide React](https://lucide.dev/)
+- [TheMealDB](https://www.themealdb.com/api.php). 
 - ESLint
 
 ## Como executar
@@ -32,28 +33,11 @@ npm install
 npm run dev
 ```
 
-## Estrutura
-
-```
-src/
-├── App.jsx              # monta as seções da página
-├── main.jsx             # ponto de entrada do React
-├── index.css            # importação do Tailwind
-└── components/
-    ├── Hero.jsx
-    ├── Apresentacao.jsx
-    ├── Funcionalidades.jsx
-    ├── ProcurarComidas.jsx
-    ├── Depoimentos.jsx
-    ├── Contactform.jsx
-    └── Footer.jsx
-```
-
 ## Integrantes
 
-| Nome | GitHub |
+| Nome | RM |
 | --- | --- |
-| Allan Freire | [@AllanFreire](https://github.com/AllanFreire) |
-| Danillo Roque | [@danilloroque](https://github.com/danilloroque) |
-| Leonardo Scalisse | [@LeoScalisse](https://github.com/LeoScalisse) |
-| Pietro Ruotolo | [@PietroRuotolo](https://github.com/PietroRuotolo) |
+| Allan Freire | 569534 |
+| Danillo Roque | 573831 |
+| Leonardo Scalisse | 569114 |
+| Pietro Ruotolo | 570632 |
