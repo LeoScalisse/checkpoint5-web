@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import ContactForm from './components/Contactform';
 import ProcurarComida from './components/ProcurarComidas';
 import Funcionalidades from './components/Funcionalidades';
+import Depoimentos from './components/Depoimentos';
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <Apresentacao />
       <Funcionalidades />
       <ProcurarComida/>
+      <Depoimentos />
       <ContactForm/>
       <Footer />
     </>
