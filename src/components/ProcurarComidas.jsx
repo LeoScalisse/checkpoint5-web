@@ -34,7 +34,7 @@ export default function ProcurarComida(){
     ProcurarComidas(query.trim() || "a");
   }
  
-  function igredientes(meal) {
+  function ingredientes(meal) {
     const list = [];
     for (let i = 1; i <= 20; i++) {
       const ing = meal[`strIngredient${i}`];
@@ -147,7 +147,7 @@ export default function ProcurarComida(){
                 Ingredientes
               </h3>
               <ul className="mt-2 text-sm text-stone-700 space-y-1 list-disc list-inside">
-                {igredientes(selected).map((item, i) => (
+                {ingredientes(selected).map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
